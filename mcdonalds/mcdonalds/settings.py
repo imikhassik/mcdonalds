@@ -58,7 +58,7 @@ ROOT_URLCONF = 'mcdonalds.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,8 +126,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CELERY_BROKER_URL = 'redis://192.168.68.129:6379'
-CELERY_RESULT_BACKEND = 'redis://192.168.68.129:6379'
+CELERY_BROKER_URL = 'redis://192.168.68.133:6379'
+CELERY_RESULT_BACKEND = 'redis://192.168.68.133:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
