@@ -29,6 +29,6 @@ class NewOrderView(CreateView):
 
 def take_order(request, oid):
     order = Order.objects.get(pk=oid)
-    order.time_out = datetime.now()
+    order.time_out = datetime.utcnow()
     order.save()
     return redirect('/')
